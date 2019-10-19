@@ -9,38 +9,29 @@
 
 library(shiny)
 source('map.R')
+source('planningTab.R')
+source('communityTab.R')
 
-# Define UI for application that draws a histogram
-ui <- fluidPage(
-
-    # Application title
-    titlePanel("Fire Warden"),
-
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            fireMap
-        )
-    )
-)
+ui <- navbarPage("Fire Warden",
+                 planningTab,
+                 communityTab
+                 )
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-
+    # TODO: remove
     output$distPlot <- renderPlot({
         # generate bins based on input$bins from ui.R
         x    <- faithful[, 2]
         bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
+        
         # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
+        hist(x,
+             breaks = bins,
+             col = 'darkgray',
+             border = 'white')
     })
 }
 
-# Run the application 
+# Run the application
 shinyApp(ui = ui, server = server)
