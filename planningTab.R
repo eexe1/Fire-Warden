@@ -2,8 +2,6 @@ library(shiny)
 library(leaflet.extras)
 source('map.R')
 
-planningTab <- tabPanel("Action Plan", planningContent)
-
 planningContent <- fluidPage(
   fireMap %>%
     addDrawToolbar(
@@ -30,3 +28,6 @@ planningContent <- fluidPage(
     checkboxInput("showPrediction", "Fire Severity Level", FALSE),
   ))
 )
+
+planningTab <- tabPanel("Action Plan", planningContent)
+
