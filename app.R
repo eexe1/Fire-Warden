@@ -8,7 +8,7 @@
 #
 
 library(shiny)
-source('~/Documents/workspace/fire-warden/map.R')
+source('map.R')
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
