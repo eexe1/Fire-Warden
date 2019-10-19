@@ -3,16 +3,17 @@ library(leaflet.extras)
 source('map.R')
 
 planningContent <- fluidPage(
-  fireMap %>%
-    addDrawToolbar(
-      targetGroup = 'draw',
-      editOptions = editToolbarOptions(selectedPathOptions = selectedPathOptions())
-    )  %>%
-    addLayersControl(
-      overlayGroups = c('draw'),
-      options =
-        layersControlOptions(collapsed = FALSE)
-    ),
+  leafletOutput("map"),
+  # fireMap %>%
+  #   addDrawToolbar(
+  #     targetGroup = 'draw',
+  #     editOptions = editToolbarOptions(selectedPathOptions = selectedPathOptions())
+  #   )  %>%
+  #   addLayersControl(
+  #     overlayGroups = c('draw'),
+  #     options =
+  #       layersControlOptions(collapsed = FALSE)
+  #   ),
   hr(),
   fluidRow(column(
     3,
@@ -26,7 +27,8 @@ planningContent <- fluidPage(
       sep = ""
     ),
     checkboxInput("showPrediction", "Fire Severity Level", FALSE),
-  ))
+  )),
+  textOutput("shouldDisplayFireThreat")
 )
 
 planningTab <- tabPanel("Action Plan", planningContent)
