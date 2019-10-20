@@ -1,34 +1,14 @@
 library(shiny)
-library(leaflet.extras)
-source('map.R')
 
 planningContent <- fluidPage(
+  tags$style(type = "text/css", "#map {height: calc(100vh - 250px) !important;}"),
   leafletOutput("map"),
-  # fireMap %>%
-  #   addDrawToolbar(
-  #     targetGroup = 'draw',
-  #     editOptions = editToolbarOptions(selectedPathOptions = selectedPathOptions())
-  #   )  %>%
-  #   addLayersControl(
-  #     overlayGroups = c('draw'),
-  #     options =
-  #       layersControlOptions(collapsed = FALSE)
-  #   ),
   hr(),
   fluidRow(column(
     3,
     titlePanel("Settings"),
-    sliderInput(
-      "fireYear",
-      "Year of Fire",
-      min = 2015,
-      max = 2019,
-      value = 2019,
-      sep = ""
-    ),
-    checkboxInput("showPrediction", "Fire Severity Level", FALSE),
-  )),
-  textOutput("shouldDisplayFireThreat")
+    checkboxInput("showPrediction", "Show Fire Threat Level 3", FALSE)
+  ))
 )
 
 planningTab <- tabPanel("Action Plan", planningContent)

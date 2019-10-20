@@ -1,9 +1,8 @@
-
-
 library(leaflet)
+library(leaflet.extras)
 source('data.R')
 
-map <- leaflet() %>%
+map <- leaflet(height=1000) %>%
   addTiles(
     "https://api.mapbox.com/styles/v1/firewarden/ck1xdwyca241f1ctb5qg9k4oj/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZmlyZXdhcmRlbiIsImEiOiJjazF4ZHRwaXQwYmw2M2ptdXF4eDRlcWw0In0.7pwZEAfL8n5l0VEoQ-9FVA"
   ) %>%
@@ -16,7 +15,8 @@ map <- leaflet() %>%
   )  %>%
   addLayersControl(overlayGroups = c('draw'),
                    options =
-                     layersControlOptions(collapsed = FALSE))
+                     layersControlOptions(collapsed = FALSE)) %>%
+  addStyleEditor()
 
 fireMap <- function(showFireThreat) {
   if (showFireThreat) {
