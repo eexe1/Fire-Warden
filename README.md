@@ -45,14 +45,14 @@ SnatchBot
 
 [Link](https://fire-warden.shinyapps.io/fire-warden/)
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "image 1")
+Action Plan: 
+![alt text](https://github.com/eexe1/Fire-Warden/raw/master/doc/image3.png "image 1")
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "image 2")
+Climate Data: 
+![alt text](https://github.com/eexe1/Fire-Warden/raw/master/doc/image2.png "Climate Data")
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "image 3")
+Chat Bot: 
+![alt text](https://github.com/eexe1/Fire-Warden/raw/master/doc/image1.png "Chat Bot")
 
 
 ## Tags
