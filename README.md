@@ -45,6 +45,16 @@ SnatchBot
 
 [Link](https://fire-warden.shinyapps.io/fire-warden/)
 
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "image 1")
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "image 2")
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "image 3")
+
+
 ## Tags
 
 #fire, #fireresponder, #hazard, #missioncritical, #warden, #R, #shiny, #machine learning, #neural network, #earth, #environment, #life
